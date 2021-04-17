@@ -8,7 +8,7 @@ const ROT_SPEED = 7
 
 func _physics_process(delta: float) -> void:
 	
-	#to move left and right
+	#To move left and right
 	if Input.is_action_pressed("move_right") and Input.is_action_pressed("move_left"):
 		velocity.x = lerp(velocity.x, 0, 0.1)
 		velocity.x = DIAG_SPEED
@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = lerp(velocity.x, 0, 0.1)
 		
-	#to move forward and backwards
+	#To move forward and backwards
 	if Input.is_action_pressed("move_forward") and Input.is_action_pressed("move_backwards"):
 		velocity.z = lerp(velocity.z, 0, 0.1)
 		velocity.z = DIAG_SPEED
